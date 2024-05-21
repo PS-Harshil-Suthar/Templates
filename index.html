@@ -1,195 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Template App</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <nav class="navbar">
       <div class="img">
-        <img src="productsquads logo.png" alt="PS-Logo">
+        <img src="productsquads logo.png" alt="PS-Logo" />
       </div>
-        <h1 class="navbar-title">Templates</h1>
-        <!-- <input type="text" id="searchInput" oninput="searchCards()" placeholder="Search by title..."> -->
+      <h1 class="navbar-title">Templates</h1>
+      <!-- <input type="text" id="searchInput" oninput="searchCards()" placeholder="Search by title..."> -->
     </nav>
     <div class="center">
       <aside class="sidebar">
         <div class="card-header">
           <h2 class="card-title">Template Title</h2>
-      </div>
+        </div>
         <ul>
-            <li><a href="#off-boarding-checklist" onclick="showCard(1)">Off-Boarding Checklist</a></li>
-            <li><a href="#on-boarding-checklist" onclick="showCard(2)">On-Boarding Checklist</a></li>
-            <li><a href="#request-approval-format" onclick="showCard(3)">Request Approval Format</a></li>
-            <li><a href="#paid-licence" onclick="showCard(4)">Paid Licence</a></li>
-            <!-- <li><a href="#approval-process" onclick="showCard(5)">Approval Process</a></li> -->
-            <li><a href="#okta-setup-mail" onclick="showCard(6)">OKTA Setup Mail</a></li>
-            <li><a href="#cloud-pc-assign" onclick="showCard(7)">Cloud PC Assign</a></li>
-            <li><a href="#user-not-responding" onclick="showCard(8)">User Not Responding</a></li>
-            <li><a href="#user-message-after-escalate" onclick="showCard(9)">User-Message After Escalate</a></li>
+          <li>
+            <a href="#off-boarding-checklist" onclick="showCard(1)"
+              >Off-Boarding Checklist</a
+            >
+          </li>
+          <li>
+            <a href="#on-boarding-checklist" onclick="showCard(2)"
+              >On-Boarding Checklist</a
+            >
+          </li>
+          <li>
+            <a href="#request-approval-format" onclick="showCard(3)"
+              >Request Approval Format</a
+            >
+          </li>
+          <li>
+            <a href="#paid-licence" onclick="showCard(4)">Paid Licence</a>
+          </li>
+          <li><a href="#vulnerability-template" onclick="showCard(5)">vulnerability Template</a></li>
+          <li>
+            <a href="#okta-setup-mail" onclick="showCard(6)">OKTA Setup Mail</a>
+          </li>
+          <li>
+            <a href="#cloud-pc-assign" onclick="showCard(7)">Cloud PC Assign</a>
+          </li>
+          <li>
+            <a href="#user-not-responding" onclick="showCard(8)"
+              >User Not Responding</a
+            >
+          </li>
+          <li>
+            <a href="#user-message-after-escalate" onclick="showCard(9)"
+              >User-Message After Escalate</a
+            >
+          </li>
         </ul>
-    </aside>
-    <section class="homepage-cards">
+      </aside>
+      <section class="homepage-cards">
         <div class="card" id="card-1">
-            <div class="card-header">
-                <h2 class="card-title">Off-Boarding Checklist</h2>
-                <button class="copy-btn" onclick="copyToClipboard(1)"><i class="far fa-copy"></i></button>
-            </div>
-            <div class="card-content">
-                <ul class="content-text">
-                    <li>Provide mailbox access to</li>
-                    <li>Provide OneDrive access to</li>
-                    <li>Disable account in Active Directory</li>
-                    <li>All security groups removed</li>
-                    <li>Move user to Terminated OU in AD and specify term date in description field</li>
-                    <li>Sign in Block in Admin Center</li>
-                    <li>Remove the Cloud PC Licences</li>
-                </ul>
-            </div>
+          <div class="card-header">
+            <h2 class="card-title">Off-Boarding Checklist</h2>
+            <button class="copy-btn" onclick="copyToClipboard(1)">
+              <i class="far fa-copy"></i>
+            </button>
+          </div>
+          <div class="card-content">
+            <ul class="content-text">
+              <li>Provide mailbox access to</li>
+              <li>Provide OneDrive access to</li>
+              <li>Disable account in Active Directory</li>
+              <li>All security groups removed</li>
+              <li>
+                Move user to Terminated OU in AD and specify term date in
+                description field
+              </li>
+              <li>Sign in Block in Admin Center</li>
+              <li>Remove the Cloud PC Licences</li>
+            </ul>
+          </div>
         </div>
         <div class="card" id="card-2">
-            <div class="card-header">
-                <h2 class="card-title">On-Boarding Checklist</h2>
-                <button class="copy-btn" onclick="copyToClipboard(2)"><i class="far fa-copy"></i></button>
-            </div>
-            <div class="card-content">
-                <ul class="content-text">
-                    <li>Check Email and proxy address attribute are correctly set</li>
-                    <li>Check the Preferred Data Location attribute is correctly set</li>
-                    <li>Contractor moved to correct OU</li>
-                    <li>Contractor added to Basis Default AD Groups?</li>
-                    <li>Contractor is added to 3E Contractors Group?</li>
-                    <li>Contractors assigned with Service Desk Self Service Portal Access?</li>
-                    <li>Mimic the DLs / Security Groups as per Same As Account?</li>
-                    <li>Check the OKTA Dashboard setup</li>
-                    <li>Contractors assigned with Azure Cloud PC / Horizon Virtual PC?</li>
-                    <li>Default applications / SW installed on PC?</li>
-                    <li>Contractor Login Details Sent to Manager</li>
-                    <li>Login instructions and OKTA setup instructions sent.</li>
-                    <li>Ensure you add all the post check details in Ticket before closing. </li>
-                </ul>
-            </div>
+          <div class="card-header">
+            <h2 class="card-title">On-Boarding Checklist</h2>
+            <button class="copy-btn" onclick="copyToClipboard(2)">
+              <i class="far fa-copy"></i>
+            </button>
+          </div>
+          <div class="card-content">
+            <ul class="content-text">
+              <li>Check Email and proxy address attribute are correctly set</li>
+              <li>
+                Check the Preferred Data Location attribute is correctly set
+              </li>
+              <li>Contractor moved to correct OU</li>
+              <li>Contractor added to Basis Default AD Groups?</li>
+              <li>Contractor is added to 3E Contractors Group?</li>
+              <li>
+                Contractors assigned with Service Desk Self Service Portal
+                Access?
+              </li>
+              <li>Mimic the DLs / Security Groups as per Same As Account?</li>
+              <li>Check the OKTA Dashboard setup</li>
+              <li>
+                Contractors assigned with Azure Cloud PC / Horizon Virtual PC?
+              </li>
+              <li>Default applications / SW installed on PC?</li>
+              <li>Contractor Login Details Sent to Manager</li>
+              <li>Login instructions and OKTA setup instructions sent.</li>
+              <li>
+                Ensure you add all the post check details in Ticket before
+                closing.
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="card" id="card-3">
-            <div class="card-header">
-                <h2 class="card-title">Request Approval Format</h2>
-                <button class="copy-btn" onclick="copyToClipboard(3)"><i class="far fa-copy"></i></button>
-            </div>
-            <div class="card-content">
-                <ul class="content-text">
-                    <p>Hello @Username , <br /><br />
-                    Username has requested access to the Description so he/she can access the Subject. This requires line manager approval. Please confirm if we should proceed with this request.
-                    <br /><br />Kindest regards<br />IT Tech Support,</p>
-                </ul>
-            </div>
+          <div class="card-header">
+            <h2 class="card-title">Request Approval Format</h2>
+            <button class="copy-btn" onclick="copyToClipboard(3)">
+              <i class="far fa-copy"></i>
+            </button>
+          </div>
+          <div class="card-content">
+            <ul class="content-text">
+              <p>
+                Hello @Username , <br /><br />
+                Username has requested access to the Description so he/she can
+                access the Subject. This requires line manager approval. Please
+                confirm if we should proceed with this request.
+                <br /><br />Kindest regards<br />IT Tech Support,
+              </p>
+            </ul>
+          </div>
         </div>
         <div class="card" id="card-4">
-            <div class="card-header">
-                <h2 class="card-title">Paid Licence</h2>
-                <button class="copy-btn" onclick="copyToClipboard(4)"><i class="far fa-copy"></i></button>
-            </div>
-            <div class="card-content">
-                <ul class="content-text">
-                    <p>Hey @username , <br /><br />
-                    @username Haqani has requested a paid license for Lucidchart. This costs 365 USD per user per year.
-                    Please confirm approval for this request.
-                    <br /><br />Kindest regards<br />IT Tech Support</p>
-                </ul>
-            </div>
+          <div class="card-header">
+            <h2 class="card-title">Paid Licence</h2>
+            <button class="copy-btn" onclick="copyToClipboard(4)">
+              <i class="far fa-copy"></i>
+            </button>
+          </div>
+          <div class="card-content">
+            <ul class="content-text">
+              <p>
+                Hey @username , <br /><br />
+                @username Haqani has requested a paid license for Lucidchart.
+                This costs 365 USD per user per year. Please confirm approval
+                for this request.
+                <br /><br />Kindest regards<br />IT Tech Support
+              </p>
+            </ul>
+          </div>
         </div>
-        <!-- <div class="card" id="card-5">
-            <div class="card-header">
-                <h2 class="card-title">Approval Process</h2>
-                <button class="copy-btn" onclick="copyToClipboard(5)"><i class="far fa-copy"></i></button>
-            </div>
-            <div class="card-content">
-                <ul class="content-text">
-                    <li>Download the attachment</li>
-                    <li>Save the attachment with format Requestor_surname_UAM</li>
-                    <li>Open the saved attachment from location</li>
-                    <li>Complete the information required</li>
-                    <li>Open ‘IDM upload’ Outlook template from Mailbox</li>
-                    <li>Attach completed UAM</li>
-                    <li>Send email to EAAA IDM upload</li>
-                    <li>Ensure the UAM is filled and saved to the correct naming convention</li>
-                    <li>Update and close the service manager ticket.</li>
-                </ul>
-            </div>
-        </div> -->
+        <div class="card" id="card-5">
+          <div class="card-header">
+            <h2 class="card-title">vulnerability Template</h2>
+            <button class="copy-btn" onclick="copyToClipboard(5)">
+              <i class="far fa-copy"></i>
+            </button>
+          </div>
+          <div class="card-content">
+            <ul class="content-text">
+              <h2> Subject: - Action Required: Update Google Chrome</h2>
+              <p>
+                Dear @username , <br /><br />
+                It seems you might be running on an older Chrome version, which
+                has some security vulnerabilities so it is important to keep
+                Chrome up to date. <br><br> This should also be happening automatically
+                so when you open Chrome check if at the top right it tells you
+                there is a new version. Let us know if you see anything like
+                this. <br><br> Furthermore, please follow these steps to your Google
+                Chrome browser to the latest version by following these steps: <br><br>
+                1. Open Chrome. <br> 2. Click the three vertical dots (Menu) in the
+                top-right corner. <br> 3. Go to "Help" > "About Google Chrome". <br> 4.
+                Chrome will check for updates and install them. <br> 5. Click
+                "Relaunch" to complete the update. <br><br> Kindest regards
+                <br />
+                IT Tech Support,
+              </p>
+            </ul>
+          </div>
+        </div>
         <div class="card" id="card-6">
-            <div class="card-header">
-                <h2 class="card-title">OKTA Setup Mail</h2>
-                <button class="copy-btn" onclick="copyToClipboard(6)"><i class="far fa-copy"></i></button>
-            </div>
-            <div class="card-content">
-                <ul class="content-text">
-                    <p>Dear @username , <br /><br />
-                    Please follow the below instructions to complete your OKTA setup.
-                    <br /><br />
-                    Step 1: You will receive a SMS on your mobile to verify your account. <br />
-                    Step 2: You will receive an email in your account with subject line “Welcome to OKTA”.<br />
-                    Step 3: Click the link in the email and follow the instructions to complete the setup.
-                    <br /><br />
-                    Kindest regards<br />IT Tech Support,</p>
-                </ul>
-            </div>
+          <div class="card-header">
+            <h2 class="card-title">OKTA Setup Mail</h2>
+            <button class="copy-btn" onclick="copyToClipboard(6)">
+              <i class="far fa-copy"></i>
+            </button>
+          </div>
+          <div class="card-content">
+            <ul class="content-text">
+              <p>
+                Dear @username , <br /><br />
+                Please follow the below instructions to complete your OKTA
+                setup.
+                <br /><br />
+                Step 1: You will receive a SMS on your mobile to verify your
+                account. <br />
+                Step 2: You will receive an email in your account with subject
+                line “Welcome to OKTA”.<br />
+                Step 3: Click the link in the email and follow the instructions
+                to complete the setup.
+                <br /><br />
+                Kindest regards<br />IT Tech Support,
+              </p>
+            </ul>
+          </div>
         </div>
         <div class="card" id="card-7">
-            <div class="card-header">
-                <h2 class="card-title">Cloud PC Assign</h2>
-                <button class="copy-btn" onclick="copyToClipboard(7)"><i class="far fa-copy"></i></button>
-            </div>
-            <div class="card-content">
-                <ul class="content-text">
-                    <p>Hello @username , <br /><br />
-                    Cloud PC has been assigned and the machine is created. Please follow below steps to complete the process.
-                    <br /><br />
-                    Step 1: Open Azure Virtual Desktop client<br />
-                    Step 2: Login using your AD credentials<br />
-                    Step 3: Follow the instructions for machine setup.
-                    <br /><br />
-                    Kindest regards<br />IT Tech Support,</p>
-                </ul>
-            </div>
+          <div class="card-header">
+            <h2 class="card-title">Cloud PC Assign</h2>
+            <button class="copy-btn" onclick="copyToClipboard(7)">
+              <i class="far fa-copy"></i>
+            </button>
+          </div>
+          <div class="card-content">
+            <ul class="content-text">
+              <p>
+                Hello @username , <br /><br />
+                Cloud PC has been assigned and the machine is created. Please
+                follow below steps to complete the process.
+                <br /><br />
+                Step 1: Open Azure Virtual Desktop client<br />
+                Step 2: Login using your AD credentials<br />
+                Step 3: Follow the instructions for machine setup.
+                <br /><br />
+                Kindest regards<br />IT Tech Support,
+              </p>
+            </ul>
+          </div>
         </div>
         <div class="card" id="card-8">
-            <div class="card-header">
-                <h2 class="card-title">User Not Responding</h2>
-                <button class="copy-btn" onclick="copyToClipboard(8)"><i class="far fa-copy"></i></button>
-            </div>
-            <div class="card-content">
-                <ul class="content-text">
-                    <p>Hello @username , <br /><br />
-                    We have not received any response on your request. Please respond with the required information.
-                    <br /><br />
-                    Kindest regards<br />IT Tech Support,</p>
-                </ul>
-            </div>
+          <div class="card-header">
+            <h2 class="card-title">User Not Responding</h2>
+            <button class="copy-btn" onclick="copyToClipboard(8)">
+              <i class="far fa-copy"></i>
+            </button>
+          </div>
+          <div class="card-content">
+            <ul class="content-text">
+              <p>
+                Hello @username , <br /><br />
+                We have not received any response on your request. Please
+                respond with the required information.
+                <br /><br />
+                Kindest regards<br />IT Tech Support,
+              </p>
+            </ul>
+          </div>
         </div>
         <div class="card" id="card-9">
-            <div class="card-header">
-                <h2 class="card-title">User-Message After Escalate</h2>
-                <button class="copy-btn" onclick="copyToClipboard(9)"><i class="far fa-copy"></i></button>
-            </div>
-            <div class="card-content">
-                <ul class="content-text">
-                    <p>Hello @username , <br /><br />
-                    Your request has been escalated to the relevant department. Please allow some time for us to respond.
-                    <br /><br />
-                    Kindest regards<br />IT Tech Support,</p>
-                </ul>
-            </div>
+          <div class="card-header">
+            <h2 class="card-title">User-Message After Escalate</h2>
+            <button class="copy-btn" onclick="copyToClipboard(9)">
+              <i class="far fa-copy"></i>
+            </button>
+          </div>
+          <div class="card-content">
+            <ul class="content-text">
+              <p>
+                Hello @username , <br /><br />
+                Your request has been escalated to the relevant department.
+                Please allow some time for us to respond.
+                <br /><br />
+                Kindest regards<br />IT Tech Support,
+              </p>
+            </ul>
+          </div>
         </div>
-    </section>
+      </section>
     </div>
     <div id="popup-container" class="popup-container hidden"></div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
-
-
