@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', initialize);
+document.addEventListener("DOMContentLoaded", initialize);
 
 function initialize() {
   const defaultCardId = 1;
@@ -6,26 +6,35 @@ function initialize() {
 }
 
 function showCard(cardId) {
-  const cards = document.querySelectorAll('.card');
-  cards.forEach(card => card.style.display = 'none'); // Hide all cards
+  const cards = document.querySelectorAll(".card");
+  cards.forEach((card) => (card.style.display = "none")); // Hide all cards
   const selectedCard = document.getElementById(`card-${cardId}`);
   if (selectedCard) {
-    selectedCard.style.display = 'block'; // Show the selected card if found
+    selectedCard.style.display = "block"; // Show the selected card if found
   } else {
     console.error(`Card with id ${cardId} not found`);
   }
+
+  const links = document.querySelectorAll(".sidebar a");
+  links.forEach((link) => link.classList.remove("active"));
+
+  // Add 'active' class to the clicked link
+  links[cardId - 1].classList.add("active");
 }
 
 function copyToClipboard(cardId) {
-  const cardContentElement = document.querySelector(`#card-${cardId} .card-content`);
+  const cardContentElement = document.querySelector(
+    `#card-${cardId} .card-content`
+  );
   if (!cardContentElement) {
     console.error(`Content element for card with id ${cardId} not found`);
     return;
   }
   const cardContent = cardContentElement.innerText;
-  navigator.clipboard.writeText(cardContent)
+  navigator.clipboard
+    .writeText(cardContent)
     .then(() => showCopyPopup(cardContent))
-    .catch(error => console.error('Could not copy text: ', error));
+    .catch((error) => console.error("Could not copy text: ", error));
 }
 
 function showCopyPopup(content) {

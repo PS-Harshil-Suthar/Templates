@@ -127,6 +127,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background: #fcf9ff;
 }
 
 a {
@@ -185,6 +186,10 @@ h1 {
   color: #7708ee;
   transition: 0.2s all linear;
 }
+.sidebar a.active{
+  color: #111111;
+  border-bottom: 1px solid #111111;
+}
 
 .sidebar ul li a:hover {
   margin: 0 0.5em;
@@ -225,7 +230,7 @@ p {
   width: 50%;
   margin: 1em;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: 0.2s all linear;
 }
