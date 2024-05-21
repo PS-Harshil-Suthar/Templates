@@ -14,7 +14,7 @@ html {
   justify-content: space-between;
   align-items: center;
   margin: 1em;
-  background-color: #0f4876;
+  background-color: #7708ee;
   color: #fff;
   text-align: center;
   padding: 0.7em;
@@ -31,7 +31,7 @@ p{
 
 #searchInput {
     width: 20%;
-    border: 1px solid #0f4876;
+    border: 1px solid #7708ee;
     outline: none;
     padding: 1.2em 2em;
     border-radius: 50px;
@@ -65,7 +65,7 @@ p{
   justify-content: space-between;
   align-items: center;
   padding: 1em;
-  background-color: #0f4876;
+  background-color: #7708ee;
   color: #fff;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -132,9 +132,9 @@ body {
 a {
   text-decoration: none;
 }
-/* li {
-  list-style: none;
-} */
+li {
+  list-style: circle;
+}
 
 html {
   font-size: 62.5%;
@@ -144,13 +144,23 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  line-height: 1em;
   margin: 1em;
-  background-color: #0f4876;
-  color: #fff;
+  background-color: #fdfdfd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #7708ee;
   text-align: center;
   padding: 0.7em;
   border-radius: 5px;
   font-size: 2em;
+}
+
+h1 {
+  width: 15%;
+  margin: 0 2em;
+}
+.navbar img {
+  margin-left: 3em;
 }
 .center {
   display: flex;
@@ -158,11 +168,12 @@ html {
 .sidebar {
   width: 50%;
   padding: 2em;
-  margin: 3em;
 }
 .sidebar ul {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 2em;
+  padding: 2em 4em;
+  background: #fdfdfd;
+  margin: 0;
 }
 .sidebar ul li {
   padding: 0.5em;
@@ -170,14 +181,15 @@ html {
   border-radius: 5px;
   font-size: 1.5em;
 }
-.sidebar ul li a{
-  color: #0f4876;
+.sidebar ul li a {
+  color: #7708ee;
   transition: 0.2s all linear;
 }
 
 .sidebar ul li a:hover {
-  color: #ed6c02;
-  border-bottom: 1px solid #ed6c02;
+  margin: 0 0.5em;
+  color: #111111;
+  border-bottom: 1px solid #111111;
 }
 
 h1 {
@@ -191,7 +203,7 @@ p {
 
 #searchInput {
   width: 20%;
-  border: 1px solid #0f4876;
+  border: 1px solid #7708ee;
   outline: none;
   padding: 1.2em 2em;
   border-radius: 50px;
@@ -206,7 +218,7 @@ p {
   display: flex;
   justify-content: start;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 1em 0;
 }
 
 .card {
@@ -215,8 +227,11 @@ p {
   border-radius: 5px;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.2s all linear;
 }
-
+.card:hover{
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
 .card:last-child {
   margin-right: 0;
 }
@@ -225,8 +240,8 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2em;
-  background-color: #0f4876;
+  padding: 1.5em;
+  background-color: #7708ee;
   color: #fff;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -239,16 +254,19 @@ p {
 }
 
 .copy-btn {
-  padding: 8px 16px;
-  background-color: #ed6c02;
+  padding: 1em 2em;
+  background-color: #111111;
   border: none;
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 1.2em;
+  transition: 0.2s all linear;
 }
 
 .copy-btn:hover {
-  background-color: #0056b3;
+  background-color: #fdfdfd;
+  color: #111111;
 }
 
 .card-content {
@@ -265,8 +283,9 @@ ul li {
 }
 
 .popup-container {
-  width: 50%;
-  height: 50%;
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -274,14 +293,21 @@ ul li {
   border-radius: 10px;
   z-index: 999;
 }
+.popup-container.hidden {
+  display: none;
+}
+
 
 .card2 {
-  width: 100%;
   margin: 1em;
   font-size: 1.3em;
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .card2 .content-text {

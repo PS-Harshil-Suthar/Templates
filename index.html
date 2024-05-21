@@ -10,17 +10,23 @@
 </head>
 <body>
     <nav class="navbar">
+      <div class="img">
+        <img src="productsquads logo.png" alt="PS-Logo">
+      </div>
         <h1 class="navbar-title">Templates</h1>
         <!-- <input type="text" id="searchInput" oninput="searchCards()" placeholder="Search by title..."> -->
     </nav>
     <div class="center">
       <aside class="sidebar">
+        <div class="card-header">
+          <h2 class="card-title">Template Title</h2>
+      </div>
         <ul>
             <li><a href="#off-boarding-checklist" onclick="showCard(1)">Off-Boarding Checklist</a></li>
             <li><a href="#on-boarding-checklist" onclick="showCard(2)">On-Boarding Checklist</a></li>
             <li><a href="#request-approval-format" onclick="showCard(3)">Request Approval Format</a></li>
             <li><a href="#paid-licence" onclick="showCard(4)">Paid Licence</a></li>
-            <li><a href="#approval-process" onclick="showCard(5)">Approval Process</a></li>
+            <!-- <li><a href="#approval-process" onclick="showCard(5)">Approval Process</a></li> -->
             <li><a href="#okta-setup-mail" onclick="showCard(6)">OKTA Setup Mail</a></li>
             <li><a href="#cloud-pc-assign" onclick="showCard(7)">Cloud PC Assign</a></li>
             <li><a href="#user-not-responding" onclick="showCard(8)">User Not Responding</a></li>
@@ -95,7 +101,7 @@
                 </ul>
             </div>
         </div>
-        <div class="card" id="card-5">
+        <!-- <div class="card" id="card-5">
             <div class="card-header">
                 <h2 class="card-title">Approval Process</h2>
                 <button class="copy-btn" onclick="copyToClipboard(5)"><i class="far fa-copy"></i></button>
@@ -113,7 +119,7 @@
                     <li>Update and close the service manager ticket.</li>
                 </ul>
             </div>
-        </div>
+        </div> -->
         <div class="card" id="card-6">
             <div class="card-header">
                 <h2 class="card-title">OKTA Setup Mail</h2>
@@ -180,270 +186,10 @@
         </div>
     </section>
     </div>
-    <div id="popup-container" class="popup-container"></div>
+    <div id="popup-container" class="popup-container hidden"></div>
 
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Template App</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <nav class="navbar">
-      <h1 class="navbar-title">Templates</h1>
-      <input
-        type="text"
-        id="searchInput"
-        oninput="searchCards()"
-        placeholder="Search by title..."
-      />
-    </nav>
-
-    <section class="homepage-cards">
-      <div class="card">
-        <div class="card-header">
-          <h2 class="card-title">Off-Boarding Checklist</h2>
-          <button class="copy-btn" onclick="copyToClipboard(1)">
-            <i class="far fa-copy"></i>
-          </button>
-        </div>
-        <div class="card-content">
-          <ul class="content-text">
-            <li>Provide mailbox access to</li>
-            <li>Provide OneDrive access to</li>
-            <li>Disable account in Active Directory</li>
-            <li>All security groups removed</li>
-            <li>
-              Move user to Terminated OU in AD and specify term date in
-              description field
-            </li>
-            <li>Sign in Block in Admin Center</li>
-            <li>Remove the Cloud PC Licences</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <h2 class="card-title">On-Boarding Checklist</h2>
-          <button class="copy-btn" onclick="copyToClipboard(2)">
-            <i class="far fa-copy"></i>
-          </button>
-        </div>
-        <div class="card-content">
-          <ul class="content-text">
-            <li>Check Email and proxy address attribute are correctly set</li>
-            <li>Check the Preferred Data Location attribute is correctly set</li>
-            <li>Contractor moved to correct OU</li>
-            <li>Contractor added to Basis Default AD Groups?</li>
-            <li>Contractor is added to 3E Contractors Group?</li>
-            <li>Contractors assigned with Service Desk Self Service Portal Access?</li>
-            <li>Mimic the DLs / Security Groups as per Same As Account?</li>
-            <li>Check the OKTA Dashboard setup</li>
-            <li>Contractors assigned with Azure Cloud PC / Horizon Virtual PC?</li>
-            <li>Default applications / SW installed on PC?</li>
-            <li>Contractor Login Details Sent to Manager</li>
-            <li>Login instructions and OKTA setup instructions sent.</li>
-            <li>Ensure you add all the post check details in Ticket before closing. </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <h2 class="card-title">Request Approval Format</h2>
-          <button class="copy-btn" onclick="copyToClipboard(3)">
-            <i class="far fa-copy"></i>
-          </button>
-        </div>
-        <div class="card-content">
-          <ul class="content-text">
-            <p>
-              Hello <b>username</b> , <br /><br />
-              <b>username</b> has requested access to the Description so he/she can
-              access the Subject. This requires line manager approval. Please
-              confirm if we should proceed with this request.
-              <br /><br />
-              Kindest regards
-              <br />
-              IT Tech Support,
-            </p>
-          </ul>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <h2 class="card-title">Paid Licence</h2>
-          <button class="copy-btn" onclick="copyToClipboard(4)">
-            <i class="far fa-copy"></i>
-          </button>
-        </div>
-        <div class="card-content">
-          <ul class="content-text">
-            <p>
-              Hey <b>username</b> , <br /><br />
-              <b>username</b> Haqani has requested a paid license for Lucidchart. This
-              costs 365 USD per year so it requires manager approval. Please
-              confirm if we should proceed with this request.
-              <br /><br />
-              Kindest regards
-              <br />
-              IT Tech Support,
-            </p>
-          </ul>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <h2 class="card-title">Approval Process</h2>
-          <button class="copy-btn" onclick="copyToClipboard(5)">
-            <i class="far fa-copy"></i>
-          </button>
-        </div>
-        <div class="card-content">
-          <ul class="content-text">
-            <p>
-              Hey <b>username</b> , <br /><br />
-              <b>username</b> has requested access to the Description so he/she can
-              access the Subject. This requires line manager approval. Please
-              confirm if we should proceed with this request.
-              <br /><br />
-              Kindest regards
-              <br />
-              IT Tech Support,
-            </p>
-          </ul>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <h2 class="card-title">OKTA Setup Mail</h2>
-          <button class="copy-btn" onclick="copyToClipboard(6)">
-            <i class="far fa-copy"></i>
-          </button>
-        </div>
-        <div class="card-content">
-          <ul class="content-text">
-            <p>
-              Hey <b>username</b> , <br /><br />
-              Hope you are doing well! <br /><br />
-              We have setup the default account and access for Ravikant Tyagi.
-              OKTA, Email, Teams are configured for him. Please let us know if
-              any additional access is needed? Also can you confirm if he
-              require Cloud PC (Virtual PC) to 3E application? Thanks IT Tech
-              Support.
-              <br /><br />
-              Kindest regards
-              <br />
-              IT Tech Support,
-            </p>
-          </ul>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <h2 class="card-title">Cloud PC Assign</h2>
-          <button class="copy-btn" onclick="copyToClipboard(7)">
-            <i class="far fa-copy"></i>
-          </button>
-        </div>
-        <div class="card-content">
-          <ul class="content-text">
-            <p>
-              Hey <b>username</b> , <br /><br />
-              Hope you are doing well! <br /><br />
-              This is to confirm that <b>username</b> has successfully been
-              provided with a Cloud PC. We have forwarded an email to you with
-              the details regarding this Cloud PC.
-              <br /><br />
-              Kindest regards
-              <br />
-              IT Tech Support,
-            </p>
-          </ul>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <h2 class="card-title">User Not Responding</h2>
-          <button class="copy-btn" onclick="copyToClipboard(8)">
-            <i class="far fa-copy"></i>
-          </button>
-        </div>
-        <div class="card-content">
-          <ul class="content-text">
-            <p>
-              Hey <b>username</b> , <br /><br />
-              Hope you are doing well! <br /><br />
-              It seems we have not heard back from you so please check the
-              questions we sent you in previous emails and get back to us. We’ll
-              leave the ticket open for one more business day and after that we
-              will be archiving it due to inactivity if we do not hear back from
-              you.
-              <br /><br />
-              Kindest regards
-              <br />
-              IT Tech Support,
-            </p>
-          </ul>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <h2 class="card-title">User-Message After Escalate</h2>
-          <button class="copy-btn" onclick="copyToClipboard(9)">
-            <i class="far fa-copy"></i>
-          </button>
-        </div>
-        <div class="card-content">
-          <ul class="content-text">
-            <p>
-              Hey <b>username</b> , <br /><br />
-              Hope you are doing well! <br /><br />
-              Writing to let you know that we’re moving this ticket to the
-              relevant team that can assist with this request.
-              <br /><br />
-              Kindest regards
-              <br />
-              IT Tech Support,
-            </p>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <div id="popup-container" class="popup-container"></div>
-    <script src="script.js"></script>
-  </body>
-</html> -->
 
 
