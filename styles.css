@@ -34,7 +34,8 @@ html {
   align-items: center;
   line-height: 1em;
   margin: 1em;
-  background-color: #fdfdfd;
+  background-color: var(--background-color);
+  /* background-image: linear-gradient(to right,#fcf9ff, #9949f0, #7708ee); */
   box-shadow: var(--box-shadow);
   color: var(--primary-color);
   text-align: center;
@@ -51,6 +52,9 @@ h1 {
 .navbar img {
   margin-left: 3em;
 }
+/* .navbar h1{
+  color: var(--background-color);
+} */
 
 .center {
   display: flex;
@@ -95,10 +99,6 @@ h1 {
   border-bottom: 1px solid var(--secondary-color);
 }
 
-h1 {
-  width: 15%;
-  margin: 0 2em;
-}
 
 p {
   font-size: 1.4em;
